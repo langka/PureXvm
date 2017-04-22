@@ -11,8 +11,7 @@ import java.io.File;
  */
 public class Main {
     public static void main(String[] args) throws Exception{
-        File file = new File("A.class");
-        XClass xClass=XClassScanner.getInstance().parseClassFile(file).xClass;
-        System.out.println(Integer.toHexString(xClass.magic));
+       XJvm jvm = new XJvm(args);
+       jvm.start();
     }
 }

@@ -28,4 +28,23 @@ public class XClass {
     public FileMethod[] methods;
     public int attrCount;
     public FileAttr[] attrs;
+
+    @Override
+    public String toString() {
+        String x = "";
+        for(int i=1;i<constantPoolCount;i++){
+            if(poolInfos[i].flag==1) {
+                x += new String(poolInfos[i].val);
+                x+="\n";
+            }
+        }
+        return x;
+    }
+    public String getMethods(){
+        String x="";
+        for(int i=0;i<methodCount;i++){
+            x+=new String(poolInfos[methods[i].nameIndex].val);
+        }
+        return x;
+    }
 }

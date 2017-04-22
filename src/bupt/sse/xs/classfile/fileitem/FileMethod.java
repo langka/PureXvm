@@ -6,4 +6,9 @@ package bupt.sse.xs.classfile.fileitem;
  * hold the value of method in class file
  */
 public class FileMethod {
+    public int accessFlags;
+    public int nameIndex;
+    public int descriptorIndex;
+    public int attrCount;
+    public FileAttr[] attrs;
 }
